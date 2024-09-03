@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nishant - Projects</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+	
+	body {
+    	font-family: Arial, sans-serif;
+    	display: flex;
+    	flex-direction: column;
+    	align-items: center;
+    	margin: 0;
+    	padding: 0;
+	}
+
+        header {
+            width: 56%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10px 6px 10px;
+            box-sizing: border-box;
+        }
+
+        footer {
+            width: 56%;
+            text-align: center;
+            padding: 4px 10px;
+            font-size: 12px;
+            background-color: #FFFFFF;
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            box-sizing: border-box;
+        }
+
+        .logo {
+            height: 80px;
+            margin: 0 10px;
+        }
+
+        .right-logo {
+            height: 80px;
+        }
+
+        .grey-box {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 8px auto;
+            width: 56%;
+            box-sizing: border-box;
+        }
+
+        .grey-box-content {
+            flex: 1;
+            padding-right: 5px;
+            max-width: 40%;
+            font-size: 17px;
+        }
+
+        .grey-box-content p {
+	    margin-top: 14px;
+            margin-bottom: 10px;
+     	    margin-right: 13px;
+            text-align: justify;
+        }
+
+        .grey-box-image {
+	    margin-top: 14px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            max-width: 70%;
+        }
+
+
+        .grey-box-content-2 {
+            flex: 1;
+            padding-right: 5px;
+            max-width: 30%;
+            font-size: 17px;
+        }
+
+        .grey-box-content-2 p {
+	    margin-top: 14px;
+            margin-bottom: 10px;
+     	    margin-right: 5px;
+            text-align: justify;
+        }
+
+        .grey-box-content-3 {
+            flex: 1;
+            padding-right: 5px;
+            max-width: 1%;
+            font-size: 17px;
+        }
+
+        .grey-box-content-3 p {
+	    margin-top: 14px;
+            margin-bottom: 10px;
+     	    margin-right: 5px;
+            text-align: justify;
+        }
+
+	.grey-box-pdf-3 {
+    	    display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            max-width: 99%;
+	}
+
+
+        .highlight {
+            color: Maroon;
+            font-weight: bold;
+        }
+
+        .grey-box-content-4 {
+            flex: 1;
+            padding-right: 1px;
+            max-width: 1%;
+            font-size: 1px;
+        }
+	
+	.grey-box-video {
+    	    display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            max-width: 99%;
+     	    margin-right: 22px;
+	}
+
+	.grey-box-pdf {
+    	    display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            max-width: 70%;
+	}
+
+
+	.grey-box-pdf iframe {
+   	   border: none;
+	   margin-top: 0px;
+           margin-bottom: 0px;
+     	   margin-right: 10px;
+	}
+
+        .link-box {
+            width: 290px;
+            padding: 8px;
+            font-size: 17px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            margin: 6px 0;
+            display: inline-block;
+            background-color: #ffffff;
+        }
+
+        .link-box-2 {
+            width: 210px;
+            padding: 8px;
+            font-size: 17px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            margin: 6px 0;
+            display: inline-block;
+            background-color: #ffffff;
+        }
+
+	#pdf-select {
+            width: 220px;
+            padding: 8px;
+            font-size: 14px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            margin-top: 6px;
+        }
+
+
+        .blue-text {
+            color: black;
+            font-weight: bold;
+        }
+
+        .bluu-text {
+            color: navy;
+            font-size: 29px;
+            font-weight: bold;
+        }
+        .blu-text {
+            color: blue;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+
+	.Dblue-text {
+            color: navy;
+            font-weight: bold;
+
+        }
+
+        #slider-image {
+            width: 100%;
+            margin-bottom: 16px;
+        }
+
+ 
+        a.no-underline {
+            text-decoration: none;
+            color: navy;
+	    font-weight: bold;
+        }
+
+	
+        #fullscreen-pdf-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #fullscreen-pdf-container iframe {
+            width: 800px;
+            height: 900px;
+        }
+
+        #fullscreen-pdf-close {
+            position: absolute;
+            top: 10px;
+            right: 60px;
+            font-size: 44px;
+            color: white;
+            cursor: pointer;
+        }
+
+
+        <!-- @media (max-width: 1500px) {} >
+
+
+
+        <!-- @media (max-width: 1400px) {} >
+
+
+        <!-- @media (max-width: 1200px) {}  >
+
+        <!-- @media (max-width: 1100px) {} >
+
+
+        <!-- @media (max-width: 950px) {} >
+
+        <!-- @media (max-width: 800px) {} >
+
+        <!-- @media (max-width: 690px) {} >
+
+
+        <!-- @media (max-width: 590px) {} >
+
+
+        <!-- @media (max-width: 450px) {} >
+
+
+        <!--  @media (max-width: 380px) {} >
+
+    </style>
+</head>
+
+<body>
+<div style="height: 2px;"></div>
+<header id="pdf-section1">
+    <img src="Nishant.png" alt="IIMB Logo" class="logo">
+    
+</header>
+
+<div class="grey-box">
+
+    <div class="grey-box-content">
+        <p><span class="highlight">Hi, My name is Nishant. Thanks for visiting my Webpage. This page showcases my projects at Internship in Aviac Technologies (IIT Hyderabad), ISRO Ahmedabad and IIM Bangalore. </span></p>
+        <p><br></p>
+
+        <p class="blue-text">Computer Vision for AgriTech</p>
+
+        <div class="link-box" >
+            <a href="#grey-box-pdf" class="no-underline">Crop Segmentation using Vegetation Mask</a>
+        </div>
+
+	<div class="link-box" >
+            <a href="#grey-box-pdf4" class="no-underline">Crops Identification and Classification using CV2 Python Library</a>
+        </div>
+	<div class="link-box" >
+            <a href="#grey-box-pdf3" class="no-underline">Crops Nutrients Prediction - Project at ISRO</a>
+        </div>
+	<div class="link-box">
+    		<!-- Set the href attribute to the external URL -->
+    	<a href="https://nishant0363.github.io/JJM-Presentation/" class="no-underline" target="_blank">Project at IIM Bangalore</a>
+	</div>
+
+    </div>
+
+    <div class="grey-box-image">
+        <img id="main-image" src="image.png" alt="Image 1">
+    </div>
+
+
+</div>
+<p id="grey-box-pdf">
+        <br>
+        <br>
+
+</p>
+
+<div class="grey-box">
+    <div class="grey-box-content-2">
+        <p><span class="highlight">The project segments green crops from drone images into individual plots for detailed analysis. Using Python libraries like Rasterio and Geopandas, it calculates the (NDVI), applies a threshold to create a vegetation mask, and uses contours to detect boundaries, which are converted into polygons. Further analysis, such as calculating the mean NDVI, assesses crop health and predicts yield.<br></span></p>
+        <br>
+        <br>
+        <br>
+        <div class="link-box-2">
+            <a href="#pdf-section1" class="no-underline">Back</a>
+        </div>
+        <div class="link-box-2">
+            <a href="#" id="fullscreen-pdf-button" class="no-underline">Fullscreen</a>
+        </div>
+    </div>
+
+    <!-- Add an id to this div to create a target for the anchor link -->
+    <div class="grey-box-pdf" >
+        <br>
+        <!-- Set the src attribute to display the PDF by default -->
+        <iframe id="pdf-viewer" src="Crop_Analytics.pdf#toolbar=0" width="530px" height="476px" frameborder="0" allowfullscreen></iframe>
+        <br>
+        <br>
+    </div>
+</div>
+<p id="grey-box-pdf3">
+        <br>
+	<br>
+</p>
+<div class="grey-box">
+<div class="grey-box-content-3">
+</div>
+    <!-- Add an id to this div to create a target for the anchor link -->
+    <div class="grey-box-pdf-3" >
+        <p><span class="blu-text">Project at Space Application Center ISRO</p>
+        <!-- Set the src attribute to display the PDF by default -->
+        <iframe id="pdf-viewer" src="ISRO - NISHANT - Hyperspectral.pdf#toolbar=0" width="760px" height="490px" frameborder="0" allowfullscreen></iframe>
+        <br>
+        <br>
+    </div>
+</div>
+
+<p id="grey-box-pdf4">
+        <br>
+	<br>
+</p>
+<div class="grey-box">
+    <div class="grey-box-content-4">
+        <!-- You can add any content here for styling or information purposes -->
+    </div>
+    
+    <!-- Add an id to this div to create a target for the anchor link -->
+    <div class="grey-box-video">
+        <p><span class="bluu-text">Crops classification using CV2 Python Library</p>
+        <!-- Video player to replace the PDF viewer -->
+        <video id="video-player" width="750px" height="470px" controls>
+            <source src="Crop Id CV2 Python Project.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <br>
+        <br>
+        <br>
+    </div>
+</div>
+
+<script>
+// Fullscreen button functionality
+document.getElementById('fullscreen-pdf-button').addEventListener('click', function(event) {
+    event.preventDefault();
+    const pdfViewer = document.getElementById('pdf-viewer');
+    if (pdfViewer.requestFullscreen) {
+        pdfViewer.requestFullscreen();
+    } else if (pdfViewer.mozRequestFullScreen) { // Firefox
+        pdfViewer.mozRequestFullScreen();
+    } else if (pdfViewer.webkitRequestFullscreen) { // Chrome, Safari and Opera
+        pdfViewer.webkitRequestFullscreen();
+    } else if (pdfViewer.msRequestFullscreen) { // IE/Edge
+        pdfViewer.msRequestFullscreen();
+    }
+});
+</script>
+
+
+<footer>
+	<br>
+	<br>
+</footer>
+
+</body>
+</html>
